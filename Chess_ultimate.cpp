@@ -13,71 +13,16 @@ int main ()
     cout<<"Как се казва играч 2? ";
     string X;
     cin>>X;
-    char duska [9] [9];
-    duska [0][0]='t';
-    duska [0][1]='h';
-    duska [0][2]='o';
-    duska [0][3]='q';
-    duska [0][4]='k';
-    duska [0][5]='o';
-    duska [0][6]='h';
-    duska [0][7]='t';
-    duska [1][0]='p';
-    duska [1][1]='p';
-    duska [1][2]='p';
-    duska [1][3]='p';
-    duska [1][4]='p';
-    duska [1][5]='p';
-    duska [1][6]='p';
-    duska [1][7]='p';
-    duska [2][0]='';
-    duska [2][1]='';
-    duska [2][2]='';
-    duska [2][3]='';
-    duska [2][4]='';
-    duska [2][5]='';
-    duska [2][6]='';
-    duska [2][7]='';
-    duska [3][0]='';
-    duska [3][1]='';
-    duska [3][2]='';
-    duska [3][3]='';
-    duska [3][4]='';
-    duska [3][5]='';
-    duska [3][6]='';
-    duska [3][7]='';
-    duska [4][0]='';
-    duska [4][1]='';
-    duska [4][2]='';
-    duska [4][3]='';
-    duska [4][4]='';
-    duska [4][5]='';
-    duska [4][6]='';
-    duska [4][7]='';
-    duska [5][0]='';
-    duska [5][1]='';
-    duska [5][2]='';
-    duska [5][3]='';
-    duska [5][4]='';
-    duska [5][5]='';
-    duska [5][6]='';
-    duska [5][7]='';
-    duska [6][0]='P';
-    duska [6][1]='P';
-    duska [6][2]='P';
-    duska [6][3]='P';
-    duska [6][4]='P';
-    duska [6][5]='P';
-    duska [6][6]='P';
-    duska [6][7]='P';
-    duska [7][0]='T';
-    duska [7][1]='H';
-    duska [7][2]='O';
-    duska [7][3]='Q';
-    duska [7][4]='K';
-    duska [7][5]='O';
-    duska [7][6]='H';
-    duska [7][7]='T';
+    char duska [9] [9]={
+    {"thoqkoht"},
+    {"pppppppp"},
+    {""},
+    {""},
+    {""},
+    {""},
+    {"PPPPPPPP"},
+    {"THOQKOHT"}
+    };
         int z=8;
         int c=8;
         int chislo;
@@ -106,49 +51,49 @@ int main ()
     if (bukva=='A' or bukva=='a'){
             chislo2=0;
     }
-    if (bukva=='B' or bukva=='b'){
+    else if (bukva=='B' or bukva=='b'){
             chislo2=1;
 
     }
-    if (bukva=='C' or bukva=='c'){
+    else if (bukva=='C' or bukva=='c'){
             chislo2=2;
 
     }
-    if (bukva=='D' or bukva=='d'){
+    else if (bukva=='D' or bukva=='d'){
             chislo2=3;
 
     }
-    if (bukva=='E' or bukva=='e'){
+    else if (bukva=='E' or bukva=='e'){
             chislo2=4;
 
     }
-    if (bukva=='F' or bukva=='f'){
+    else if (bukva=='F' or bukva=='f'){
             chislo2=5;
 
     }
-    if (bukva=='G' or bukva=='g'){
+    else if (bukva=='G' or bukva=='g'){
             chislo2=6;
 
     }
-    if (bukva=='H' or bukva=='h'){
+    else if (bukva=='H' or bukva=='h'){
             chislo2=7;
     }
     if (duska [realno_chislo] [chislo2]== 'P' or duska [realno_chislo] [chislo2]== 'p'){
     cout<<"Пешката може да се мръдне две полета напред първия си ход и едно поле напред от втория си ход нататък. Вземането става, взимайки едно поле диагонално напред. Пешката не може да се движи назад или настарни! Има специално двежение, което се казва ан пасан, което може да се изпълни само ако опонента не си е мърдал пешката, срещу която ще се изпълни специалното действие. Ако вражеската пешка мине встрани от от вашата пешка при първия си ход, местейки се с три полета напред, Вие имате право да вземете вражеската пешка, минавайки зад гърба и. Ако пешката Ви стигне края на полето  (първото поле от страната на опонента Ви), пешката се превръща в която си иска фигура (мит е, че става само във взета фигура)."<<endl;
     }
-    if (duska [realno_chislo] [chislo2]== 't' or duska [realno_chislo] [chislo2]== 'T'){
+    else if (duska [realno_chislo] [chislo2]== 't' or duska [realno_chislo] [chislo2]== 'T'){
     cout<<"Топът може да се мърда напред, колкото си иска, и настрани, колокото си иска. Ако срещне вражеска фигура, я побеждава и спира на нейното място. Царят и топът, ако и двете фигури не са мръднати, може да направят рокадо. Ако е с близкия топ, царят застава на едно поле от края на дъската, а топът застава на две полета от същия край на дъската. Ако рокадото е с далечния топ, царят застава на две полета от края на дъската, а топът застава на три полета от същия край."<<endl;
     }
-    if (duska [realno_chislo] [chislo2]== 'o' or duska [realno_chislo] [chislo2]== 'O'){
+    else if (duska [realno_chislo] [chislo2]== 'o' or duska [realno_chislo] [chislo2]== 'O'){
     cout<<"Офицерът може да се мърда по диагонал, колкото си иска. Ако срещне вражеска фиура, я побеждава и спира на нейното място."<<endl;
     }
-    if (duska [realno_chislo] [chislo2]== 'h' or duska [realno_chislo] [chislo2]== 'H'){
+    else if (duska [realno_chislo] [chislo2]== 'h' or duska [realno_chislo] [chislo2]== 'H'){
     cout<<"Конят може да се движи под формата на Г, като прескача фигурите по път си и побеждава фигурата, върху която се приземява. Г-то, което описва конят, е съставено от четири полета - три в една посока и едно, което се разклонява наляво или надясно спрямо посоката на другите три полета."<<endl;
     }
-    if (duska [realno_chislo] [chislo2]== 'k' or duska [realno_chislo] [chislo2]== 'K'){
+    else if (duska [realno_chislo] [chislo2]== 'k' or duska [realno_chislo] [chislo2]== 'K'){
     cout<<"Царят може да се движи по диагонал, наляво, надясно, напред и назад, кото винаги се мърда с по едно квадратче. По същия начин и взима фигури. Царят и топът, ако и двете фигури не са мръднати, може да направят рокадо. Ако е с близкия топ, царят застава на едно поле от края на дъската, а топът застава на две полета от същия край на дъската. Ако рокадото е с далечния топ, царят застава на две полета от края на дъската, а топът застава на три полета от същия край."<<endl;
     }
-    if (duska [realno_chislo] [chislo2]== 'Q' or duska [realno_chislo] [chislo2]== 'Q'){
+    else if (duska [realno_chislo] [chislo2]== 'q' or duska [realno_chislo] [chislo2]== 'Q'){
     cout<<"Царицата може да се движи по диагонал, наляво, надясно, напред и назад, по колкото полета си иска. Като стигне до вражеска фигура я взима и застава на нейното място."<<endl;
     }
     cout<<"Напиши полето, където ще я местиш. ";
@@ -158,31 +103,31 @@ int main ()
     if (bukva_dve=='A' or bukva_dve=='a'){
             chislo2_dve=0;
     }
-    if (bukva_dve=='B' or bukva_dve=='b'){
+    else if (bukva_dve=='B' or bukva_dve=='b'){
             chislo2_dve=1;
 
     }
-    if (bukva_dve=='C' or bukva_dve=='c'){
+    else if (bukva_dve=='C' or bukva_dve=='c'){
             chislo2_dve=2;
 
     }
-    if (bukva_dve=='D' or bukva_dve=='d'){
+    else if (bukva_dve=='D' or bukva_dve=='d'){
             chislo2_dve=3;
 
     }
-    if (bukva_dve=='E' or bukva_dve=='e'){
+    else if (bukva_dve=='E' or bukva_dve=='e'){
             chislo2_dve=4;
 
     }
-    if (bukva_dve=='F' or bukva_dve=='f'){
+    else if (bukva_dve=='F' or bukva_dve=='f'){
             chislo2_dve=5;
 
     }
-    if (bukva_dve=='G' or bukva_dve=='g'){
+    else if (bukva_dve=='G' or bukva_dve=='g'){
             chislo2_dve=6;
 
     }
-    if (bukva=='H' or bukva=='h'){
+    else if (bukva=='H' or bukva=='h'){
             chislo2_dve=7;
     }
     duska [realno_chislo_dve] [chislo2_dve]=duska [realno_chislo] [chislo2];
@@ -205,32 +150,50 @@ int main ()
     if (bukva=='A' or bukva=='a'){
             chislo2=0;
     }
-    if (bukva=='B' or bukva=='b'){
+    else if (bukva=='B' or bukva=='b'){
             chislo2=1;
 
     }
-    if (bukva=='C' or bukva=='c'){
+    else if (bukva=='C' or bukva=='c'){
             chislo2=2;
 
     }
-    if (bukva=='D' or bukva=='d'){
+    else if (bukva=='D' or bukva=='d'){
             chislo2=3;
 
     }
-    if (bukva=='E' or bukva=='e'){
+    else if (bukva=='E' or bukva=='e'){
             chislo2=4;
 
     }
-    if (bukva=='F' or bukva=='f'){
+    else if (bukva=='F' or bukva=='f'){
             chislo2=5;
 
     }
-    if (bukva=='G' or bukva=='g'){
+    else if (bukva=='G' or bukva=='g'){
             chislo2=6;
 
     }
-    if (bukva=='H' or bukva=='h'){
+    else if (bukva=='H' or bukva=='h'){
             chislo2=7;
+    }
+    if (duska [realno_chislo] [chislo2]== 'P' or duska [realno_chislo] [chislo2]== 'p'){
+    cout<<"Пешката може да се мръдне две полета напред първия си ход и едно поле напред от втория си ход нататък. Вземането става, взимайки едно поле диагонално напред. Пешката не може да се движи назад или настарни! Има специално двежение, което се казва ан пасан, което може да се изпълни само ако опонента не си е мърдал пешката, срещу която ще се изпълни специалното действие. Ако вражеската пешка мине встрани от от вашата пешка при първия си ход, местейки се с три полета напред, Вие имате право да вземете вражеската пешка, минавайки зад гърба и. Ако пешката Ви стигне края на полето  (първото поле от страната на опонента Ви), пешката се превръща в която си иска фигура (мит е, че става само във взета фигура)."<<endl;
+    }
+    else if (duska [realno_chislo] [chislo2]== 't' or duska [realno_chislo] [chislo2]== 'T'){
+    cout<<"Топът може да се мърда напред, колкото си иска, и настрани, колокото си иска. Ако срещне вражеска фигура, я побеждава и спира на нейното място. Царят и топът, ако и двете фигури не са мръднати, може да направят рокадо. Ако е с близкия топ, царят застава на едно поле от края на дъската, а топът застава на две полета от същия край на дъската. Ако рокадото е с далечния топ, царят застава на две полета от края на дъската, а топът застава на три полета от същия край."<<endl;
+    }
+    else if (duska [realno_chislo] [chislo2]== 'o' or duska [realno_chislo] [chislo2]== 'O'){
+    cout<<"Офицерът може да се мърда по диагонал, колкото си иска. Ако срещне вражеска фиура, я побеждава и спира на нейното място."<<endl;
+    }
+    else if (duska [realno_chislo] [chislo2]== 'h' or duska [realno_chislo] [chislo2]== 'H'){
+    cout<<"Конят може да се движи под формата на Г, като прескача фигурите по път си и побеждава фигурата, върху която се приземява. Г-то, което описва конят, е съставено от четири полета - три в една посока и едно, което се разклонява наляво или надясно спрямо посоката на другите три полета."<<endl;
+    }
+    else if (duska [realno_chislo] [chislo2]== 'k' or duska [realno_chislo] [chislo2]== 'K'){
+    cout<<"Царят може да се движи по диагонал, наляво, надясно, напред и назад, кото винаги се мърда с по едно квадратче. По същия начин и взима фигури. Царят и топът, ако и двете фигури не са мръднати, може да направят рокадо. Ако е с близкия топ, царят застава на едно поле от края на дъската, а топът застава на две полета от същия край на дъската. Ако рокадото е с далечния топ, царят застава на две полета от края на дъската, а топът застава на три полета от същия край."<<endl;
+    }
+    else if (duska [realno_chislo] [chislo2]== 'q' or duska [realno_chislo] [chislo2]== 'Q'){
+    cout<<"Царицата може да се движи по диагонал, наляво, надясно, напред и назад, по колкото полета си иска. Като стигне до вражеска фигура я взима и застава на нейното място."<<endl;
     }
     cout<<"Напиши полето, където ще я местиш. ";
     cin>>bukva_dve;
@@ -239,31 +202,31 @@ int main ()
     if (bukva_dve=='A' or bukva_dve=='a'){
             chislo2_dve=0;
     }
-    if (bukva_dve=='B' or bukva_dve=='b'){
+    else if (bukva_dve=='B' or bukva_dve=='b'){
             chislo2_dve=1;
 
     }
-    if (bukva_dve=='C' or bukva_dve=='c'){
+    else if (bukva_dve=='C' or bukva_dve=='c'){
             chislo2_dve=2;
 
     }
-    if (bukva_dve=='D' or bukva_dve=='d'){
+    else if (bukva_dve=='D' or bukva_dve=='d'){
             chislo2_dve=3;
 
     }
-    if (bukva_dve=='E' or bukva_dve=='e'){
+    else if (bukva_dve=='E' or bukva_dve=='e'){
             chislo2_dve=4;
 
     }
-    if (bukva_dve=='F' or bukva_dve=='f'){
+    else if (bukva_dve=='F' or bukva_dve=='f'){
             chislo2_dve=5;
 
     }
-    if (bukva_dve=='G' or bukva_dve=='g'){
+    else if (bukva_dve=='G' or bukva_dve=='g'){
             chislo2_dve=6;
 
     }
-    if (bukva=='H' or bukva=='h'){
+    else if (bukva=='H' or bukva=='h'){
             chislo2_dve=7;
     }
     duska [realno_chislo_dve] [chislo2_dve]=duska [realno_chislo] [chislo2];
