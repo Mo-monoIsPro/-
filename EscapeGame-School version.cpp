@@ -243,7 +243,7 @@ int main ()
     system ("CLS");
     }
     SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15);
-    cout<<"The bad guy beat you! You can't kill enemies when they are awake cause you are level 1 and they are level 100! You can only beat them (if you manage to be faster than them) for 1 turn and then they come back and better don't be in front of their eyes!\n";
+    cout<<"The bad guy beat you! You can't kill the boss when they he is awake cause you are level 1 and he is level 100! You can only beat him (if you manage to be faster than him) for 1 turn and then he come back and better don't be in front of his eyes!\n";
     cout<<"The bad guy trapped you in a new labyrinth!!!\n";
     cout<<"Type <easy> or something like this to continue. \n";
     cin>>gg;
